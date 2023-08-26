@@ -1,0 +1,14 @@
+---
+
+- name: Create user accounts
+  hosts: ansible_client
+  tasks:
+    - name: Add users
+      user:
+        name: user90
+        password: "5f4dcc3b5aa765d61d8327deb882cf99"
+        state: present
+        groups: sudo
+      become: yes
+
+

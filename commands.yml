@@ -1,0 +1,13 @@
+---
+- name: Check network options using ansible
+  hosts: ansible_client
+  tasks:
+    - name: Get network interfaces information
+      shell: mkdir /home/ajay2/Desktop/ajay
+      register: network_output
+
+    - name: Display network output
+      debug:
+        var: network_output.stdout_lines
+
+
