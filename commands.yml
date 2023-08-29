@@ -1,9 +1,9 @@
 ---
-- name: Check network options using ansible
+- name: To check the ip
   hosts: ansible_client
   tasks:
     - name: Get network interfaces information
-      shell: mkdir /home/ajay2/Desktop/ajay
+      shell: ifconfig
       register: network_output
 
     - name: Display network output
