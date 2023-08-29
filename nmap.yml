@@ -1,13 +1,13 @@
 ---
 
-- name: Delete vim
+- name: Install vim
   hosts: ansible_client
   tasks:
-    - name: Delete vim
+    - name: Install vim
       become: yes
       apt:
         name: vim
-        state: absent
+        state: present
 
 
 
