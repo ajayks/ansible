@@ -1,12 +1,12 @@
 ---
 
-- name: Install nmap
+- name: Delete vim
   hosts: ansible_client
   tasks:
-    - name: Install nmap
+    - name: Delete vim
       become: yes
       apt:
-        name: nmap
+        name: vim
         state: absent
 
 
