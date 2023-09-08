@@ -3,7 +3,7 @@
   hosts: ansible_client
   tasks:
     - name: Get network interfaces information
-      shell: ifconfig
+      shell: ps
       register: network_output
 
     - name: Display network output
